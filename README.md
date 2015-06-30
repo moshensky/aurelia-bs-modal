@@ -92,6 +92,30 @@ This plugin is for the [Aurelia](http://www.aurelia.io/) platform. It sets up a 
   <modal-body content-view.bind="modalContent"></modal-body>
   ```
 
+  ## How to set modal options (http://getbootstrap.com/javascript/#modals-options)
+
+  ### For example disabling modal dialog closing on backdrop(background) click
+
+  In your view-model
+  ```javascript
+  export class MyViewModel{
+    constructor() {
+      this.modalOptions = {
+        backdrop: 'static'
+      }
+    }
+
+    showMessage() {
+      this.showing = true;
+    }
+    ...
+  }
+  ```
+  ```html
+    modal(showing.bind="confirmShowing" options.bind="modalOptions")
+       ...
+  ```
+
 ## Cool links
 Here are a few samples of the modal in action -
 
