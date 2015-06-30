@@ -26,36 +26,46 @@ var Modal = (function () {
 
     _defineDecoratedPropertyDescriptor(this, 'showing', _instanceInitializers);
 
+    _defineDecoratedPropertyDescriptor(this, 'options', _instanceInitializers);
+
     this.element = element;
   }
 
   var _Modal = Modal;
 
   _createDecoratedClass(_Modal, [{
-    key: 'showing',
-    decorators: [_aureliaFramework.bindable],
-    initializer: function () {
-      return false;
-    },
-    enumerable: true
-  }, {
     key: 'attached',
     value: function attached() {
-      _jquery2['default'](this.modal).modal({ show: false });
+      var options = Object.assign({ show: false }, this.options);
+      (0, _jquery2['default'])(this.modal).modal(options);
     }
   }, {
     key: 'showingChanged',
     value: function showingChanged(newValue) {
       if (newValue) {
-        _jquery2['default'](this.modal).modal('show');
+        (0, _jquery2['default'])(this.modal).modal('show');
       } else {
-        _jquery2['default'](this.modal).modal('hide');
+        (0, _jquery2['default'])(this.modal).modal('hide');
       }
     }
+  }, {
+    key: 'showing',
+    decorators: [_aureliaFramework.bindable],
+    initializer: function initializer() {
+      return false;
+    },
+    enumerable: true
+  }, {
+    key: 'options',
+    decorators: [_aureliaFramework.bindable],
+    initializer: function initializer() {
+      return {};
+    },
+    enumerable: true
   }], null, _instanceInitializers);
 
-  Modal = _aureliaFramework.inject(Element)(Modal) || Modal;
-  Modal = _aureliaFramework.customElement('modal')(Modal) || Modal;
+  Modal = (0, _aureliaFramework.inject)(Element)(Modal) || Modal;
+  Modal = (0, _aureliaFramework.customElement)('modal')(Modal) || Modal;
   return Modal;
 })();
 

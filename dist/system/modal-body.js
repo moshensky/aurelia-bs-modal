@@ -20,18 +20,18 @@ System.register(['aurelia-framework'], function (_export) {
         function ModalBody() {
           _classCallCheck(this, ModalBody);
 
-          _defineDecoratedPropertyDescriptor(this, 'content_view', _instanceInitializers);
+          _defineDecoratedPropertyDescriptor(this, 'contentView', _instanceInitializers);
 
-          _defineDecoratedPropertyDescriptor(this, 'content_model', _instanceInitializers);
+          _defineDecoratedPropertyDescriptor(this, 'contentModel', _instanceInitializers);
         }
 
         _createDecoratedClass(ModalBody, [{
-          key: 'content_view',
+          key: 'contentView',
           decorators: [bindable],
           initializer: null,
           enumerable: true
         }, {
-          key: 'content_model',
+          key: 'contentModel',
           decorators: [bindable],
           initializer: null,
           enumerable: true
