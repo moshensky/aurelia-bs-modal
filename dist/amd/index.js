@@ -7,10 +7,10 @@ define(['exports'], function (exports) {
   exports.configure = configure;
 
   function configure(aurelia) {
-    aurelia.globalizeResources('./modal');
-    aurelia.globalizeResources('./modal-header');
-    aurelia.globalizeResources('./modal-body');
-    aurelia.globalizeResources('./modal-footer');
-    aurelia.globalizeResources('./au-button');
+    aurelia.globalResources('./modal');
+    aurelia.globalResources('./modal-header');
+    aurelia.globalResources('./modal-body');
+    aurelia.globalResources('./modal-footer');
+    aurelia.globalResources('./au-button');
   }
 });
