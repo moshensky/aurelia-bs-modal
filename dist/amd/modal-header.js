@@ -20,6 +20,8 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
       _defineDecoratedPropertyDescriptor(this, 'title', _instanceInitializers);
 
       _defineDecoratedPropertyDescriptor(this, 'close', _instanceInitializers);
+
+      _defineDecoratedPropertyDescriptor(this, 'icon', _instanceInitializers);
     }
 
     _createDecoratedClass(ModalHeader, [{
@@ -34,6 +36,13 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
       decorators: [_aureliaFramework.bindable],
       initializer: function initializer() {
         return closeModal;
+      },
+      enumerable: true
+    }, {
+      key: 'icon',
+      decorators: [_aureliaFramework.bindable],
+      initializer: function initializer() {
+        return '';
       },
       enumerable: true
     }], null, _instanceInitializers);
